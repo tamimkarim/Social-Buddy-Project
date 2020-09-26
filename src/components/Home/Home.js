@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import NavBar from '../NavBar/NavBar';
 import Users from '../Users/Users';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     }, []);
     return (
         <div>
+            <NavBar></NavBar>
             <h3>Users :{users.length} </h3>
             {
                 users.map(user => <Users user={user}></Users>)

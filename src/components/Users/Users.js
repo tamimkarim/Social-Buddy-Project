@@ -16,9 +16,10 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
+//from material ui
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 345,
@@ -53,7 +54,7 @@ const Users = (props) => {
 
     return (
         <div className="users">
-
+            {/* Material UI */}
             <Card className={classes.root}>
                 <CardHeader
                     
@@ -67,22 +68,25 @@ const Users = (props) => {
                 />
                 <CardMedia
                     className={classes.media}
-                    image="https://mk0buildfireqbf86ll2.kinstacdn.com/wp-content/uploads/2020/07/3.3@3x-1024x622.png"
+                    image={"https://mk0buildfireqbf86ll2.kinstacdn.com/wp-content/uploads/2020/07/3.3@3x-1024x622.png"}
                     title="Paella dish"
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {body}
                     </Typography>
+                    <br/>
+                    <NavLink style={{ textDecoration: 'none' }} to={`/user/${id}`}>
+                        <Button variant="contained" color="primary">
+                        Show detail of {id}
+                    </Button></NavLink>
                 </CardContent>
 
 
                 <CardActions disableSpacing>
 
-
-                    <Link to={`/user/${id}`}><Button variant="contained" color="primary">
-                        Show detail of {id}
-                    </Button></Link>
+                        
+                    
 
         
                     <IconButton aria-label="add to favorites">
