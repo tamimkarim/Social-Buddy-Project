@@ -16,7 +16,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 //from material ui
@@ -63,39 +63,37 @@ const Users = (props) => {
                             <MoreVertIcon />
                         </IconButton>
                     }
-                    title= {<h3>{title}</h3>}
-                    subheader="September 14, 2016"
+                    title= {<h5>{title}</h5>}
+                    
                 />
+                
                 <CardMedia
                     className={classes.media}
-                    image={"https://mk0buildfireqbf86ll2.kinstacdn.com/wp-content/uploads/2020/07/3.3@3x-1024x622.png"}
+                    image={`https://loremflickr.com/320/245${id}`}
                     title="Paella dish"
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {body}
+                        { <p><small>September 27, 2020</small></p> }
                     </Typography>
                     <br/>
                     <NavLink style={{ textDecoration: 'none' }} to={`/user/${id}`}>
                         <Button variant="contained" color="primary">
-                        Show detail of {id}
+                        See details
                     </Button></NavLink>
                 </CardContent>
 
 
                 <CardActions disableSpacing>
-
-                        
-                    
-
-        
+                    <Link to="*" style={{ textDecoration: 'none', marginLeft: '1.5rem', color: 'white' }}>
                     <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
+                        <FavoriteIcon /> <small>{id}</small>
                     </IconButton>
                     <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
-                    
+                    </Link>
 
                     <IconButton
                         className={clsx(classes.expand, {
@@ -112,12 +110,12 @@ const Users = (props) => {
                     <CardContent>
                         <Typography paragraph>Method:</Typography>
                         <Typography paragraph>
-                            Overhead information is digital information transferred across the functional interface between a user and a telecommunications system, or between functional units within a telecommunications system, for the purpose of directing or controlling the transfer of user information or the detection and correction of errors.
+                            Overhead information is digital information transferred across the functional interface between a user and a telecommunications system.
 
           </Typography>
                         <Typography paragraph>
 
-                            Overhead information originated by the user is not considered to be system overhead information. Overhead information generated within the communications system and not delivered to the user is system overhead information. Thus, the user throughput is reduced by both overheads while system throughput is reduced only by system overhead.
+                            Overhead information originated by the user is not considered to be system overhead information. 
           </Typography>
                         <Typography>
                             Set aside off of the heat to let rest for 10 minutes, and then serve.

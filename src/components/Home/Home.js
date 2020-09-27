@@ -12,7 +12,9 @@ const Home = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <h3>Users :{users.length} </h3>
+            {/* <h3>Users :{users.length} </h3> */}
+            <br/>
+            <br/>
             {
                 users.map(user => <Users user={user}></Users>)
             }

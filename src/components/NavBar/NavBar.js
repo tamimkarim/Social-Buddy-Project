@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -8,16 +8,15 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
+import { Link } from 'react-router-dom';
 
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       flexGrow: 1,
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
+    
     title: {
       flexGrow: 1,
     },
@@ -34,8 +33,12 @@ const NavBar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-           Social Buddy
+          
+           <Link to="/" style={{ textDecoration: 'none', marginLeft: '1.5rem', color: 'white' }}>
+           <Button color="inherit">Social Buddy</Button>
+            </Link>
           </Typography>
+          
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
