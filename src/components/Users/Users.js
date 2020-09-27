@@ -22,7 +22,7 @@ import { Link, NavLink } from 'react-router-dom';
 //from material ui
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 345,
+        maxWidth: 645,
     },
     media: {
         height: 0,

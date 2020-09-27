@@ -93,6 +93,7 @@ const UserDetail = () => {
                     {
                         comments.map(comment => <Comment key={comment.id} comment={comment}></Comment>)
                     }
+                    
                     <Link to="/" style={{ textDecoration: 'none', marginLeft: '1.5rem', color: 'white' }}>
                     <Button size="large" color="primary">
                        visit homepage <HomeIcon/>
